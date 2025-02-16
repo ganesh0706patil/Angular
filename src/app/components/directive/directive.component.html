@@ -1,0 +1,49 @@
+<div class="mt-2 bg-secondary text-white rounded">
+    <h3>Directive</h3>
+    <div class="row pt-3">
+        <div class="col-3 p-3">
+            <div *ngIf="idDivVisible" class="bg-danger p-3 text-center rounded-3">
+                Div 1
+            </div>
+        </div>
+        <div class="col-3 p-3">
+            <div *ngIf="isToggle" class="bg-success p-3 text-center rounded-3 mt">
+                Div 2
+            </div>
+        </div>
+        <div class="col-3 p-3">
+            <div *ngIf="num1 == num2" class="bg-dark p-3 text-center rounded-3 mt">
+                Div 3
+            </div>
+        </div>
+        <div class="col-3 p-3">
+            <div *ngIf="isActive && selectedState=='India'" class="bg-primary p-3 text-center rounded-3 mt">
+                Div 4
+            </div>
+        </div>
+    </div>
+
+    <div class="row pt">
+        <div class="col-3 text-center">
+            <button class="btn btn-danger" (click)="hideDiv()">Hide</button>
+            <button class="btn btn-primary ms-2" (click)="showDiv()">Show</button>
+        </div>
+        <div class="col-3 text-center">
+            <button class="btn btn-warning ms-2" (click)="toggleDiv()">Toggle</button>
+        </div>
+        <div class="col-3 text-center">
+            <input [(ngModel)]="num1" type="text"  class="form-control bg-black text-white w-25 d-inline-block custom-placeholder" placeholder="Enter Num1">
+            <input [(ngModel)]="num2" type="text"  class="form-control bg-black text-white w-25 d-inline-block ms-2 custom-placeholder" placeholder="Enter Num2">
+        </div>
+        <div class="col-3 text-center">
+            <input class="form-check-input" [(ngModel)]="isActive" type="checkbox" id="option1">
+            <label class="form-check-label" for="option1">-Option 1</label>
+            <select [(ngModel)]="selectedState">
+                <option value="">Select States</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="SriLanka">SriLanka</option>
+            </select>
+        </div>
+    </div>
+</div>

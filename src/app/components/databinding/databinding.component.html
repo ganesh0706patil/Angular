@@ -1,9 +1,18 @@
 <!-- Interpolation -->
-<h1 class="text-success">{{ name }}</h1>
+<h1 class="text-success align-content-center">{{ name }}</h1>
 
 <!-- Property Binding -->
 <input type="text" class="bg-dark text-white" placeholder="Enter Value">
 <input [type]="type" class="bg-dark text-white" [placeholder]="textis">
 
 <!-- Event Binding -->
-<button class="btn btn-success" (click) = "showhere('Click is Invoked')">Click Here</button>
+<button class="btn btn-success" (click) = "showhere('Click is Invoked')">click here</button>
+<br><br>
+
+<!-- 2 way data binding -->
+<input type="text" [(ngModel)]="userInput" class="bg-dark text-white" placeholder="Enter something">
+<br>
+<button class="btn btn-secondary" (click)="changeText(userInput)">Change Text</button>
+
+<h3 class="text-bg-warning p-1 mt-3">{{ userInput }}</h3>
+

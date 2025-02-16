@@ -1,0 +1,4 @@
+.custom-placeholder::placeholder{
+    color:aliceblue;
+    opacity: 1;
+}
